@@ -14,8 +14,8 @@ main (int argc, char **argv)
         static struct option long_options[] =
         {
             /* These options set a flag. */
-            {"verbose", no_argument,       &verbose_flag, 1},
-            {"brief",   no_argument,       &verbose_flag, 0},
+            {"verbose", no_argument, &verbose_flag, 1},
+            {"brief",   no_argument, &verbose_flag, 0},
             /* These options don’t set a flag.
             We distinguish them by their indices. */
             {"add",     no_argument,       0, 'a'},
@@ -51,9 +51,9 @@ main (int argc, char **argv)
             puts ("option -a\n");
             break;
         case 'b':     printf ("non-option ARGV-elements: ");
-        while (optind < argc)
-        printf ("%s ", argv[optind++]);
-        putchar ('\n');
+            while (optind < argc)
+                printf ("%s ", argv[optind++]);
+            putchar ('\n');
         case 'c':
             printf ("option -c with value `%s'\n", optarg);
             break;
@@ -82,10 +82,9 @@ main (int argc, char **argv)
     {
         printf ("non-option ARGV-elements: ");
         while (optind < argc)
-        printf ("%s ", argv[optind++]);     printf ("non-option ARGV-elements: ");
-        while (optind < argc)
-        printf ("%s ", argv[optind++]);
-        putchar ('\n');
+        {
+            printf ("%s ", argv[optind++]);    
+        }
         putchar ('\n');
     }
 
