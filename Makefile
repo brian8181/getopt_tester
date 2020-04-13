@@ -5,19 +5,25 @@ BUILD=.
 # Compiler settings - Can be customized.
 CXXFLAGS = -std=c++11 -Wall
 
-all: getopt
+all: getopt getopt_long
 
 debug: CXXFLAGS += -DDEBUG -g
-debug: getopt
+debug: getopt getopt_long
 
 debuggdb: CXXFLAGS += -DDEBUG -ggdb
-debuggdb: getopt
+debuggdb: getopt getopt_long
 
 getopt: getopt.o
 	g++ $(CXXFLAGS) getopt.o -o getopt
 
 getopt.o: getopt.cpp 
 	g++ $(CXXFLAGS) -c getopt.cpp -o getopt.o
+
+getopt_long: getopt_long.o
+	g++ $(CXXFLAGS) getopt_long.o -o getopt_long
+
+getopt_long.o: getopt_long.cpp 
+	g++ $(CXXFLAGS) -c getopt_long.cpp -o getopt_long.o
 
 # utility.o: utility.cpp
 # 	g++ $(CXXFLAGS) -c utility.cpp -o utility.o
@@ -36,4 +42,4 @@ cleanobj:
 # clean all build
 .PHONY: clean
 clean:
-	rm getopt; rm *.o
+	rm getopt; rm getopt_long; rm *.o
