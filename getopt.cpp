@@ -31,7 +31,7 @@ doopts(int argc, char *argv[])
 
     opterr = 0;
 
-    while ((c = getopt (argc, argv, "abce")) != -1) 
+    while ((c = getopt (argc, argv, "abce:")) != -1) 
     {
         switch (c)
         {
