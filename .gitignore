@@ -2,3 +2,5 @@ getopt
 getopt_long
 getopt_long.o
 getopt.o
+pin
+pout

@@ -33,9 +33,11 @@ main (int argc, char **argv)
             long_options, &option_index);
 
         /* Detect the end of the options. */
-        if (c == -1)
-        break;
-
+        if (c == -1)while (optind < argc)
+        {
+            printf ("%s ", argv[optind++]);
+        }
+        putchar ('\n'); 
         switch (c)
         {
         case 0:
@@ -43,7 +45,11 @@ main (int argc, char **argv)
             if (long_options[option_index].flag != 0)
             break;
             printf ("option %s", long_options[option_index].name);
-            if (optarg)
+            if (optarg)while (optind < argc)
+        {
+            printf ("%s ", argv[optind++]);
+        }
+        putchar ('\n');
             printf (" with arg %s", optarg);
             printf ("\n");
             break;

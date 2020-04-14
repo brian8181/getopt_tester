@@ -25,9 +25,21 @@ getopt_long: getopt_long.o
 getopt_long.o: getopt_long.cpp 
 	g++ $(CXXFLAGS) -c getopt_long.cpp -o getopt_long.o
 
+pout: pout.o
+	g++ $(CXXFLAGS) pout.o -o pout
+
+pout.o: pout.cpp 
+	g++ $(CXXFLAGS) -c pout.cpp -o pout.o
+
+pin: pin.o
+	g++ $(CXXFLAGS) pin.o -o pin
+
+pin.o: pin.cpp 
+	g++ $(CXXFLAGS) -c pin.cpp -o pin.o
+
+
 # utility.o: utility.cpp
 # 	g++ $(CXXFLAGS) -c utility.cpp -o utility.o
-
 
 # clean all build
 # .PHONY: test
@@ -42,4 +54,4 @@ cleanobj:
 # clean all build
 .PHONY: clean
 clean:
-	rm getopt; rm getopt_long; rm *.o
+	rm getopt; rm getopt_long; rm pout; rm pin; rm *.o
