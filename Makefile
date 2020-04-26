@@ -5,13 +5,13 @@ BUILD=.
 # Compiler settings - Can be customized.
 CXXFLAGS = -std=c++11 -Wall
 
-all: getopt getopt_long
+all: getopt getopt_long pout pin
 
 debug: CXXFLAGS += -DDEBUG -g
-debug: getopt getopt_long
+debug: getopt getopt_long pout pin
 
 debuggdb: CXXFLAGS += -DDEBUG -ggdb
-debuggdb: getopt getopt_long
+debuggdb: getopt getopt_long pout pin
 
 getopt: getopt.o
 	g++ $(CXXFLAGS) getopt.o -o getopt
