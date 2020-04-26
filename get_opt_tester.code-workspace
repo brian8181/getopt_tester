@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "./pipes"
+		},
+		{
+			"path": "./getopt_long"
+		},
+		{
+			"path": "./getopt"
+		}
+	],
+	"settings": {}
+}

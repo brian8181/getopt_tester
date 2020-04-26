@@ -1,9 +1,0 @@
-getopt
-getopt_long
-getopt_long.o
-getopt.o
-pin
-pout
-Makefile.1
-pin.o
-pout.o
