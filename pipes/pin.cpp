@@ -1,11 +1,15 @@
-#include <iostream>
+#include <stdio.h>
 
-using namespace std;
+#define BUFFERSIZE 100
 
-int main(int argc, char* argv[])
+int main (int argc, char *argv[])
 {
-    for(int i = 0; i < argc; ++i)
-    {
-        cout << argv[i] << endl;   
-    }
+    char buffer[BUFFERSIZE];
+    //fgets(buffer, BUFFERSIZE , stdin);
+    scanf("%s", buffer);
+    printf("Read: %s", buffer);
+    return 0;
 }
+
+// $ echo "Testing" | ./pin
+// Read: Testing
