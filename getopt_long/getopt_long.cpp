@@ -45,6 +45,7 @@ main (int argc, char **argv)
             if (long_options[option_index].flag != 0)
             break;
             printf ("option %s", long_options[option_index].name);
+
             if (optarg)while (optind < argc)
         {
             printf ("%s ", argv[optind++]);
@@ -56,6 +57,7 @@ main (int argc, char **argv)
         case 'a':
             puts ("option -a\n");
             break;
+
         case 'b':     printf ("non-option ARGV-elements: ");
             while (optind < argc)
                 printf ("%s ", argv[optind++]);
@@ -72,7 +74,9 @@ main (int argc, char **argv)
         case '?':
             /* getopt_long already printed an error message. */
             break;
+
         default:
+
             abort ();
         }
     }
@@ -85,6 +89,7 @@ main (int argc, char **argv)
 
     /* Print any remaining command line arguments (not options). */
     if (optind < argc)
+
     {
         printf ("non-option ARGV-elements: ");
         while (optind < argc)
