@@ -37,6 +37,9 @@ pin: pin.o
 pin.o: pin.cpp 
 	g++ $(CXXFLAGS) -c pin.cpp -o pin.o
 
+curses: 
+	gcc main.c -o curses -lncurses
+
 
 # utility.o: utility.cpp
 # 	g++ $(CXXFLAGS) -c utility.cpp -o utility.o

@@ -1,2 +1,8 @@
+
+*.o
 pipes/pin
 pipes/pout
+
+ncurses/curses
+ncurses/main
+ncurses/cwin
